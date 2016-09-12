@@ -1,0 +1,24 @@
+{
+  "name": "homebridge-lgtv2",
+  "version": "1.0.0",
+  "description": "Homebridge LG webOS 2 plugin",
+  "main": "index.js",
+  "scripts": {},
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "webos2",
+    "lgtv",
+    "homebridge",
+    "webos"
+  ],
+  "author": "Alessio Dionisi <me@alessiodionisi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lgtv2": "^1.2.0",
+    "wake_on_lan": "0.0.4"
+  }
+}
