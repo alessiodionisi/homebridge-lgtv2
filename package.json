@@ -20,5 +20,14 @@
   "dependencies": {
     "lgtv2": "^1.2.0",
     "wake_on_lan": "0.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessiodionisi/homebridge-lgtv2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alessiodionisi/homebridge-lgtv2/issues"
+  },
+  "homepage": "https://github.com/alessiodionisi/homebridge-lgtv2#readme"
 }
