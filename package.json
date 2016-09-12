@@ -1,6 +1,6 @@
 {
   "name": "homebridge-lgtv2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "LG webOS 2 plugin for homebridge",
   "main": "index.js",
   "scripts": {},

@@ -18,8 +18,8 @@ function LGTv2(log, config, api) {
 
   this.lgtv = require('lgtv2')({
     url: 'ws://' + this.ip + ':3000',
-    timeout: 5000,
-    reconnect: 3000
+    timeout: 3000,
+    reconnect: 5000
   })
   var self = this
   this.lgtv.on('connect', function() {
@@ -64,8 +64,9 @@ LGTv2.prototype.checkWakeOnLan = function(callback) {
     if (this.checkCount < 3) {
       this.checkCount++
       this.lgtv.connect('ws://' + this.ip + ':3000')
-      setTimeout(this.checkWakeOnLan.bind(this, callback), 5000)
+      setTimeout(this.checkWakeOnLan.bind(this, callback), 7000)
     } else {
+      return callback(new Error('LGTv2 wake timeout'))
       this.checkCount = 0
     }
   }
@@ -77,7 +78,7 @@ LGTv2.prototype.setState = function(state, callback) {
     wol.wake(this.mac, function(error) {
       if (error) return callback(new Error('LGTv2 wake on lan error'))
       this.checkCount = 0
-      setTimeout(self.checkWakeOnLan.bind(self, callback), 5000)
+      setTimeout(self.checkWakeOnLan.bind(self, callback), 7000)
     })
   } else {
     if (this.connected) {
