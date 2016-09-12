@@ -14,6 +14,7 @@ function LGTv2(log, config, api) {
   this.name = config['name']
   this.mac = config['mac']
   this.connected = false
+  this.checkCount = 0
 
   this.lgtv = require('lgtv2')({
     url: 'ws://' + this.ip + ':3000',
@@ -57,10 +58,16 @@ LGTv2.prototype.getState = function(callback) {
 
 LGTv2.prototype.checkWakeOnLan = function(callback) {
   if (this.connected) {
+    this.checkCount = 0
     return callback(null, true)
   } else {
-    this.lgtv.connect('ws://' + this.ip + ':3000')
-    setTimeout(this.checkWakeOnLan.bind(this, callback), 5000)
+    if (this.checkCount < 3) {
+      this.checkCount++
+      this.lgtv.connect('ws://' + this.ip + ':3000')
+      setTimeout(this.checkWakeOnLan.bind(this, callback), 5000)
+    } else {
+      this.checkCount = 0
+    }
   }
 }
 
@@ -69,6 +76,7 @@ LGTv2.prototype.setState = function(state, callback) {
     var self = this
     wol.wake(this.mac, function(error) {
       if (error) return callback(new Error('LGTv2 wake on lan error'))
+      this.checkCount = 0
       setTimeout(self.checkWakeOnLan.bind(self, callback), 5000)
     })
   } else {
