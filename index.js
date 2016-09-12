@@ -74,12 +74,16 @@ LGTv2.prototype.checkWakeOnLan = function(callback) {
 
 LGTv2.prototype.setState = function(state, callback) {
   if (state) {
-    var self = this
-    wol.wake(this.mac, function(error) {
-      if (error) return callback(new Error('LGTv2 wake on lan error'))
-      this.checkCount = 0
-      setTimeout(self.checkWakeOnLan.bind(self, callback), 7000)
-    })
+    if (!this.connected) {
+      var self = this
+      wol.wake(this.mac, function(error) {
+        if (error) return callback(new Error('LGTv2 wake on lan error'))
+        this.checkCount = 0
+        setTimeout(self.checkWakeOnLan.bind(self, callback), 7000)
+      })
+    } else {
+      return callback(null, true)
+    }
   } else {
     if (this.connected) {
       var self = this
