@@ -1,4 +1,4 @@
-# LG webOS 2 Homebridge
+# Homebridge LGtv2 
 LG webOS 2 plugin for Homebridge
 
 ### Features
