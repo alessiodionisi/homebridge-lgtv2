@@ -1,9 +1,9 @@
 # Homebridge LGtv2 [![NPM Version](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2) [![NPM Downloads](https://img.shields.io/npm/dt/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
 LG webOS 2 plugin for Homebridge
 
-## NOTE: WIP project!
+### NOTE: WIP project!
 
-### Features
+#### Features
 * Live status
 * Turn on
 * Turn off
@@ -13,7 +13,7 @@ LG webOS 2 plugin for Homebridge
 npm install -g homebridge-lgtv2
 ```
 
-### Example config
+#### Example config
 ```json
 {
   "accessories": [
