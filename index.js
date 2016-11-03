@@ -50,6 +50,20 @@ function LGTv2(log, config, api) {
     .getCharacteristic(Characteristic.On)
     .on('get', this.getState.bind(this))
     .on('set', this.setState.bind(this))
+    
+  // Update values
+  this.getCurrent();
+}
+
+LGTv2.prototype.getCurrent = function() {
+  this.lgtv.request('ssap://api/getServiceList', function(err, res) {
+    this.connected = (err === null);
+    if (this.service.getCharacteristic(Characteristic.On).value !== this.connected)  {
+        this.service.setCharacteristic(Characteristic.On, this.connected);
+    }
+  }.bind(this));
+
+  setTimeout(this.getCurrent.bind(this), 15000);
 }
 
 LGTv2.prototype.getState = function(callback) {
@@ -93,7 +107,7 @@ LGTv2.prototype.setState = function(state, callback) {
         return callback(null, true)
       })
     } else {
-      return callback(new Error('LGTv2 is not connected'))
+      return callback(null, true)
     }
   }
 }
