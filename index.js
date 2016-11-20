@@ -1,6 +1,6 @@
 var Service, Characteristic
 var wol = require('wake_on_lan')
-var ping = require('pinger')
+var ping = require('ping')
 
 module.exports = function(homebridge) {
   Service = homebridge.hap.Service
@@ -26,13 +26,14 @@ function LGTv2(log, config, api) {
 LGTv2.prototype.getState = function(callback) {
   this.log('LGTv2 getState')
   var self = this
-  ping(this.ip, function(err, ms) {
-    if (err) {
+  ping.sys.probe(this.ip, function(isAlive) {
+    if (!isAlive) {
       self.powered = false
       return callback(null, false)
+    } else {
+      self.powered = true
+      return callback(null, true)
     }
-    self.powered = true
-    return callback(null, true)
   })
 }
 
