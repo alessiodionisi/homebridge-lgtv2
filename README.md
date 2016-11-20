@@ -11,6 +11,9 @@ LG webOS 2 plugin for Homebridge
 npm install -g homebridge-lgtv2
 ```
 
+### TV settings
+![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
+
 #### Example config
 ```json
 {
