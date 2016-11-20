@@ -1,6 +1,6 @@
 {
   "name": "homebridge-lgtv2",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "LG webOS 2 plugin for homebridge",
   "main": "index.js",
   "scripts": {},
@@ -19,7 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "lgtv2": "^1.2.0",
-    "wake_on_lan": "0.0.4"
+    "pinger": "^0.0.5",
+    "wake_on_lan": "^0.0.4"
   },
   "devDependencies": {},
   "repository": {
