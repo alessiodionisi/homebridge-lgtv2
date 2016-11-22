@@ -24,7 +24,6 @@ function LGTv2(log, config, api) {
 }
 
 LGTv2.prototype.getState = function(callback) {
-  this.log('LGTv2 getState')
   var self = this
   ping.sys.probe(this.ip, function(isAlive) {
     if (!isAlive) {
@@ -69,7 +68,6 @@ LGTv2.prototype.setState = function(state, callback) {
         reconnect: 0
       })
       lgtv.on('error', function() {
-        self.log('LGTv2 error')
         self.powered = false
         if (!cb) {
           cb = true
@@ -77,7 +75,6 @@ LGTv2.prototype.setState = function(state, callback) {
         }
       })
       lgtv.on('connect', function() {
-        self.log('LGTv2 connect')
         self.powered = true
         lgtv.request('ssap://system/turnOff', function(err, res) {
           lgtv.disconnect()
