@@ -4,17 +4,17 @@ LG webOS 2/3 plugin for Homebridge
 #### Enable this in your TV settings
 ![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
 
-#### Features
+### Features
 * Live status
 * Power on
 * Power off
 
-#### Install
+### Install
 ```bash
 npm install -g homebridge-lgtv2
 ```
 
-#### Example config
+### Example config
 ```json
 {
   "accessories": [
@@ -28,7 +28,7 @@ npm install -g homebridge-lgtv2
 }
 ```
 
-#### Changelogs
+### Changelogs
 ##### Version 1.2.1
 - New README
 
