@@ -22,11 +22,14 @@ npm install -g homebridge-lgtv2
       "accessory": "LGTv2",
       "name": "TV",
       "mac": "E8:F2:E2:09:C2:56",
-      "ip": "10.0.1.4"
+      "ip": "10.0.1.4",
+      "keyFile": "/var/homebridge/lgtv-"
     }
   ]
 }
 ```
+
+keyFile: Optional parameter in case the default path in the node_modules/lgtv2 is inaccessible due to permissions.
 
 ## Changelogs
 ### Version 1.2.1
