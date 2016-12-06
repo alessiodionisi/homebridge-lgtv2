@@ -6,15 +6,12 @@ LG webOS 2/3 plugin for Homebridge
 * Power on
 * Power off
 
-## Enable this in your TV settings
-![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
-
 ## Install
 ```bash
 npm install -g homebridge-lgtv2
 ```
 
-## Example config
+## Homebridge Configuration
 ```json
 {
   "accessories": [
@@ -30,13 +27,20 @@ npm install -g homebridge-lgtv2
 ```
 
 ### Fields
-- "accessory": Must always be "LGTv2" (required).
-- "name": Name of your accessory (required).
-- "mac": Mac Address of your LG TV (required).
-- "ip": IP Address of your LG TV (required).
-- "keyFile": Location to store app permission token for your LGTV (optional).  Defaults to the ./node_modules/lgtv2 plug in folder.
+- `accessory` Must always be "LGTv2" (required).
+- `name` Name of your accessory (required).
+- `mac` Mac Address of your LG TV (required).
+- `ip` IP Address of your LG TV (required).
+- `keyFile` Location to store app permission token for your LGTV (optional). Defaults to the ./node_modules/lgtv2 plug in folder.
+
+## LG TV Settings
+Enable this option in your TV settings
+![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
 
 ## Changelogs
+### Version 1.2.2
+- New config field `keyFile`
+
 ### Version 1.2.1
 - New README
 
