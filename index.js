@@ -13,6 +13,7 @@ function LGTv2(log, config, api) {
   this.ip = config['ip']
   this.name = config['name']
   this.mac = config['mac']
+  this.keyFile = config['keyFile']
   this.powered = false
 
   this.service = new Service.Switch(this.name)
@@ -64,6 +65,7 @@ LGTv2.prototype.setState = function(state, callback) {
       var cb = false
       var lgtv = require('lgtv2')({
         url: 'ws://' + this.ip + ':3000',
+        keyFile: this.keyFile,
         timeout: 4000,
         reconnect: 0
       })
