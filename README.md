@@ -29,7 +29,12 @@ npm install -g homebridge-lgtv2
 }
 ```
 
-keyFile: Optional parameter in case the default path in the node_modules/lgtv2 is inaccessible due to permissions.
+### Fields
+- "accessory": Must always be "LGTv2" (required).
+- "name": Name of your accessory (required).
+- "mac": Mac Address of your LG TV (required).
+- "ip": IP Address of your LG TV (required).
+- "keyFile": Location to store app permission token for your LGTV (optional).  Defaults to the ./node_modules/lgtv2 plug in folder.
 
 ## Changelogs
 ### Version 1.2.1
