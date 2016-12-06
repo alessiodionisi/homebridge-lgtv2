@@ -1,10 +1,13 @@
 # Homebridge LGtv2 [![NPM Version](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2) [![NPM Downloads](https://img.shields.io/npm/dt/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
-LG webOS 2/3 plugin for Homebridge
+LG webOS 2/3 plugin for Homebridge.
+
+To use all feature of this plugin you need the [Elgato Eve](https://www.elgato.com/en/eve/eve-app) app.
 
 ## Features
-* Live status
-* Power on
-* Power off
+* Power on/off
+* Change volume
+* Change channel
+* View channel name
 
 ## Install
 ```bash
@@ -38,15 +41,21 @@ Enable this option in your TV settings
 ![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
 
 ## Changelogs
+### Version 1.3.0
+- [NEW] Control the volume
+- [NEW] Control the channel number
+- [NEW] Identify toast
+- [NEW] View the channel name
+
 ### Version 1.2.2
-- New config field `keyFile`
+- [NEW] Config field `keyFile`
 
 ### Version 1.2.1
-- New README
+- Readme
 
 ### Version 1.2.0
-- More fast and stable power up
+- [ENHANCEMENT] More fast and stable power up
 
 ### Version 1.1.1
-- Fixed wake on lan
-- Solved getState lag
+- WoL fixed
+- GetState fixed
