@@ -1,4 +1,11 @@
-# Homebridge LGtv2 [![NPM Version](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2) [![NPM Downloads](https://img.shields.io/npm/dt/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
+# Homebridge LGtv2
+
+[![NPMV](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
+[![Travis](https://img.shields.io/travis/alessiodionisi/homebridge-lgtv2.svg?style=flat-square)](https://travis-ci.org/alessiodionisi/homebridge-lgtv2)
+[![David](https://img.shields.io/david/alessiodionisi/homebridge-lgtv2.svg?style=flat-square)](https://david-dm.org/alessiodionisi/homebridge-lgtv2)
+[![NPML](https://img.shields.io/npm/l/homebridge-lgtv2.svg?style=flat-square)](https://github.com/alessiodionisi/homebridge-lgtv2/blob/master/LICENSE)
+[![NPMD](https://img.shields.io/npm/dt/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
+
 LG webOS 2/3 plugin for Homebridge.
 
 To use all feature of this plugin you need the [Elgato Eve](https://www.elgato.com/en/eve/eve-app) app.
