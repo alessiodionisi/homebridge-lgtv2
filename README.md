@@ -1,4 +1,4 @@
-# Homebridge LGtv2
+# Homebridge LGTv2
 
 [![NPMV](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
 [![Travis](https://img.shields.io/travis/alessiodionisi/homebridge-lgtv2.svg?style=flat-square)](https://travis-ci.org/alessiodionisi/homebridge-lgtv2)
@@ -61,7 +61,7 @@ Enable this option in your TV settings
 - Readme
 
 ### Version 1.2.0
-- [ENHANCEMENT] More fast and stable power up
+- More fast and stable power up
 
 ### Version 1.1.1
 - WoL fixed
