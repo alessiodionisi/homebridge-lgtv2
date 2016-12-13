@@ -8,7 +8,7 @@ module.exports = function(homebridge) {
   Characteristic = homebridge.hap.Characteristic
 
   Characteristic.Volume = function() {
-		Characteristic.call(this, 'Volume','0000006E-0000-1000-8000-0037BB765291')
+		Characteristic.call(this, 'Volume','0000006E-0000-1000-8000-0031LG734111')
 		this.setProps({
 			format: Characteristic.Formats.INT,
 			unit: Characteristic.Units.NONE,
@@ -24,10 +24,10 @@ module.exports = function(homebridge) {
 		this.value = this.getDefaultValue()
 	}
 	inherits(Characteristic.Volume, Characteristic)
-	Characteristic.Volume.UUID = '0000006E-0000-1000-8000-0037BB765291'
+	Characteristic.Volume.UUID = '0000006E-0000-1000-8000-0031LG734111'
 
   Characteristic.ChannelNumber = function() {
-		Characteristic.call(this, 'Channel Number','0000006E-0000-1000-8000-0037BB765292')
+		Characteristic.call(this, 'Channel Number','0000006E-0000-1000-8000-0031LG734112')
 		this.setProps({
 			format: Characteristic.Formats.STRING,
 			// unit: Characteristic.Units.NONE,
@@ -43,10 +43,10 @@ module.exports = function(homebridge) {
 		this.value = this.getDefaultValue()
 	}
 	inherits(Characteristic.ChannelNumber, Characteristic)
-	Characteristic.ChannelNumber.UUID = '0000006E-0000-1000-8000-0037BB765292'
+	Characteristic.ChannelNumber.UUID = '0000006E-0000-1000-8000-0031LG734112'
 
   Characteristic.ChannelName = function() {
-		Characteristic.call(this, 'Channel Name','0000006E-0000-1000-8000-0037BB765293')
+		Characteristic.call(this, 'Channel Name','0000006E-0000-1000-8000-0031LG734113')
 		this.setProps({
 			format: Characteristic.Formats.STRING,
 			perms: [
@@ -56,7 +56,7 @@ module.exports = function(homebridge) {
 		this.value = this.getDefaultValue()
 	}
 	inherits(Characteristic.ChannelName, Characteristic)
-	Characteristic.ChannelName.UUID = '0000006E-0000-1000-8000-0037BB765293'
+	Characteristic.ChannelName.UUID = '0000006E-0000-1000-8000-0031LG734113'
 
   homebridge.registerAccessory('homebridge-lgtv2', 'LGTv2', LGTv2)
 }

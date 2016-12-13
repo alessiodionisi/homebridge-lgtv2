@@ -48,6 +48,9 @@ Enable this option in your TV settings
 ![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
 
 ## Changelogs
+### Version 1.3.1
+- Random characteristic UUID
+
 ### Version 1.3.0
 - [NEW] Control the volume
 - [NEW] Control the channel number
