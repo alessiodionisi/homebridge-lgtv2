@@ -7,56 +7,56 @@ module.exports = function(homebridge) {
   Service = homebridge.hap.Service
   Characteristic = homebridge.hap.Characteristic
 
-  Characteristic.Volume = function() {
-		Characteristic.call(this, 'Volume','0000006E-0000-1000-8000-0031LG734111')
-		this.setProps({
-			format: Characteristic.Formats.INT,
-			unit: Characteristic.Units.NONE,
-			maxValue: 100,
-			minValue: 0,
-			minStep: 1,
-			perms: [
-        Characteristic.Perms.READ,
-        Characteristic.Perms.WRITE,
-        Characteristic.Perms.NOTIFY
-      ]
-		})
-		this.value = this.getDefaultValue()
-	}
-	inherits(Characteristic.Volume, Characteristic)
-	Characteristic.Volume.UUID = '0000006E-0000-1000-8000-0031LG734111'
-
-  Characteristic.ChannelNumber = function() {
-		Characteristic.call(this, 'Channel Number','0000006E-0000-1000-8000-0031LG734112')
-		this.setProps({
-			format: Characteristic.Formats.STRING,
-			// unit: Characteristic.Units.NONE,
-			// maxValue: 999,
-			// minValue: 1,
-			// minStep: 1,
-			perms: [
-        Characteristic.Perms.READ,
-        // Characteristic.Perms.WRITE,
-        // Characteristic.Perms.NOTIFY
-      ]
-		})
-		this.value = this.getDefaultValue()
-	}
-	inherits(Characteristic.ChannelNumber, Characteristic)
-	Characteristic.ChannelNumber.UUID = '0000006E-0000-1000-8000-0031LG734112'
-
-  Characteristic.ChannelName = function() {
-		Characteristic.call(this, 'Channel Name','0000006E-0000-1000-8000-0031LG734113')
-		this.setProps({
-			format: Characteristic.Formats.STRING,
-			perms: [
-        Characteristic.Perms.READ
-      ]
-		})
-		this.value = this.getDefaultValue()
-	}
-	inherits(Characteristic.ChannelName, Characteristic)
-	Characteristic.ChannelName.UUID = '0000006E-0000-1000-8000-0031LG734113'
+  // Characteristic.Volume = function() {
+	// 	Characteristic.call(this, 'Volume','0000006E-0000-1000-8000-0031LG734111')
+	// 	this.setProps({
+	// 		format: Characteristic.Formats.INT,
+	// 		unit: Characteristic.Units.PERCENTAGE,
+	// 		maxValue: 100,
+	// 		minValue: 0,
+	// 		minStep: 1,
+	// 		perms: [
+  //       Characteristic.Perms.READ,
+  //       Characteristic.Perms.WRITE,
+  //       Characteristic.Perms.NOTIFY
+  //     ]
+	// 	})
+	// 	this.value = this.getDefaultValue()
+	// }
+	// inherits(Characteristic.Volume, Characteristic)
+	// Characteristic.Volume.UUID = '0000006E-0000-1000-8000-0031LG734111'
+  //
+  // Characteristic.ChannelNumber = function() {
+	// 	Characteristic.call(this, 'Channel Number','0000006E-0000-1000-8000-0031LG734112')
+	// 	this.setProps({
+	// 		format: Characteristic.Formats.STRING,
+	// 		// unit: Characteristic.Units.NONE,
+	// 		// maxValue: 999,
+	// 		// minValue: 1,
+	// 		// minStep: 1,
+	// 		perms: [
+  //       Characteristic.Perms.READ,
+  //       // Characteristic.Perms.WRITE,
+  //       // Characteristic.Perms.NOTIFY
+  //     ]
+	// 	})
+	// 	this.value = this.getDefaultValue()
+	// }
+	// inherits(Characteristic.ChannelNumber, Characteristic)
+	// Characteristic.ChannelNumber.UUID = '0000006E-0000-1000-8000-0031LG734112'
+  //
+  // Characteristic.ChannelName = function() {
+	// 	Characteristic.call(this, 'Channel Name','0000006E-0000-1000-8000-0031LG734113')
+	// 	this.setProps({
+	// 		format: Characteristic.Formats.STRING,
+	// 		perms: [
+  //       Characteristic.Perms.READ
+  //     ]
+	// 	})
+	// 	this.value = this.getDefaultValue()
+	// }
+	// inherits(Characteristic.ChannelName, Characteristic)
+	// Characteristic.ChannelName.UUID = '0000006E-0000-1000-8000-0031LG734113'
 
   homebridge.registerAccessory('homebridge-lgtv2', 'LGTv2', LGTv2)
 }
@@ -75,20 +75,20 @@ function LGTv2(log, config, api) {
     .on('get', this.getState.bind(this))
     .on('set', this.setState.bind(this))
 
-  this.service.addCharacteristic(Characteristic.ChannelNumber)
-  this.service.addCharacteristic(Characteristic.ChannelName)
-  this.service.addCharacteristic(Characteristic.Volume)
-
-  this.service.getCharacteristic(Characteristic.Volume)
-    .on('get', this.getVolume.bind(this))
-    .on('set', this.setVolume.bind(this))
-
-  this.service.getCharacteristic(Characteristic.ChannelNumber)
-    .on('get', this.getChannelNumber.bind(this))
-    // .on('set', this.setChannelNumber.bind(this))
-
-  this.service.getCharacteristic(Characteristic.ChannelName)
-    .on('get', this.getChannelName.bind(this))
+  // this.service.addCharacteristic(Characteristic.ChannelNumber)
+  // this.service.addCharacteristic(Characteristic.ChannelName)
+  // this.service.addCharacteristic(Characteristic.Volume)
+  //
+  // this.service.getCharacteristic(Characteristic.Volume)
+  //   .on('get', this.getVolume.bind(this))
+  //   .on('set', this.setVolume.bind(this))
+  //
+  // this.service.getCharacteristic(Characteristic.ChannelNumber)
+  //   .on('get', this.getChannelNumber.bind(this))
+  //   // .on('set', this.setChannelNumber.bind(this))
+  //
+  // this.service.getCharacteristic(Characteristic.ChannelName)
+  //   .on('get', this.getChannelName.bind(this))
 
   this.accessoryInformationService = new Service.AccessoryInformation()
     .setCharacteristic(Characteristic.Manufacturer, 'LG Electronics Inc.')

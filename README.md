@@ -21,7 +21,7 @@ To use all feature of this plugin you need the [Elgato Eve](https://www.elgato.c
 npm install -g homebridge-lgtv2
 ```
 
-## Homebridge Configuration
+## Configuration example
 ```json
 {
   "accessories": [
@@ -36,18 +36,27 @@ npm install -g homebridge-lgtv2
 }
 ```
 
-### Fields
-- `accessory` Must always be "LGTv2" (required).
-- `name` Name of your accessory (required).
-- `mac` Mac Address of your LG TV (required).
-- `ip` IP Address of your LG TV (required).
-- `keyFile` Location to store app permission token for your LGTV (optional). Defaults to the ./node_modules/lgtv2 plug in folder.
+### Configuration fields
+- `accessory` [required]
+Must always be "LGTv2
+- `name` [required]
+Name of your accessory
+- `mac` [required]
+Mac address of your tv
+- `ip` [required]
+IP address of your tv
+- `keyFile` [optional]
+Location to store permission token for your tv
 
-## LG TV Settings
-Enable this option in your TV settings
-![alt text](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "TV settings")
+## Tv settings
+Enable this option in your tv settings
+![Tv screen](https://s14.postimg.org/3p3fb9fgx/IMG_2750.jpg "Tv settings")
 
 ## Changelogs
+### Version 1.3.2
+- Temporarily removed the additional characteristics added on 1.3.0 due to compatibility issues
+- Volume as percentage
+
 ### Version 1.3.1
 - Random characteristic UUID
 
