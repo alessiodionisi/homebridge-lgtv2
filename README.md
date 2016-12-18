@@ -54,7 +54,7 @@ Enable this option in your tv settings
 
 ## Changelogs
 ### Version 1.3.2
-- Temporarily removed the additional characteristics added on 1.3.0 due to compatibility issues
+- Temporarily removed the additional characteristics added on 1.3.0 due to incompatibility issues
 - Volume as percentage
 
 ### Version 1.3.1
