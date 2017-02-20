@@ -12,16 +12,16 @@ To use all feature of this plugin you need the [Elgato Eve](https://www.elgato.c
 
 ## Features
 * Power on/off
-* Change volume
-* Change channel
-* View channel name
+* Change volume (Temporarily disabled)
+* Change channel (Temporarily disabled)
+* View channel name (Temporarily disabled)
 
 ## Install
 ```bash
 npm install -g homebridge-lgtv2
 ```
 
-## Configuration example
+## Basic configuration
 ```json
 {
   "accessories": [
@@ -29,8 +29,7 @@ npm install -g homebridge-lgtv2
       "accessory": "LGTv2",
       "name": "TV",
       "mac": "E8:F2:E2:09:C2:56",
-      "ip": "10.0.1.4",
-      "keyFile": "/var/homebridge/lgtv-"
+      "ip": "10.0.1.4"
     }
   ]
 }
