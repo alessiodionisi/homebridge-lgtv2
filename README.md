@@ -1,5 +1,7 @@
 # Homebridge LGTv2
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adnsio/homebridge-lgtv2.svg)](https://greenkeeper.io/)
+
 [![NPMV](https://img.shields.io/npm/v/homebridge-lgtv2.svg?style=flat-square)](https://npmjs.org/package/homebridge-lgtv2)
 [![Travis](https://img.shields.io/travis/alessiodionisi/homebridge-lgtv2.svg?style=flat-square)](https://travis-ci.org/alessiodionisi/homebridge-lgtv2)
 [![David](https://img.shields.io/david/alessiodionisi/homebridge-lgtv2.svg?style=flat-square)](https://david-dm.org/alessiodionisi/homebridge-lgtv2)
