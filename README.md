@@ -10,6 +10,8 @@ LG webOS 2/3 plugin for Homebridge.
 
 To use all feature of this plugin you need the [Elgato Eve](https://www.elgato.com/en/eve/eve-app) app.
 
+**NOTE: I no longer have an LG tv, so I can not continue the development of the project**
+
 ## Features
 * Power on/off
 * Change volume (Temporarily disabled)
